@@ -16,12 +16,53 @@ body {
 }
 
 header {
-  text-align: center;
   padding: 20px 0;
   margin-bottom: 30px;
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+
+.user-controls {
+  position: relative;
+}
+
+.profile-button {
+  font-size: 18px;
+  padding: 8px 10px;
+  border-radius: 50%;
+  min-width: 40px;
+}
+
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  background: white;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  min-width: 180px;
+  padding: 10px;
+  z-index: 10;
+}
+
+.profile-dropdown button {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.teacher-status {
+  font-size: 14px;
+  margin-bottom: 6px;
 }
 
 header h1 {
@@ -134,6 +175,15 @@ section h3 {
   margin-bottom: 15px;
 }
 
+.info-note {
+  background-color: #eef2ff;
+  border: 1px solid #c7d2fe;
+  color: #1a237e;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
 .form-group label {
   display: block;
   margin-bottom: 5px;
@@ -189,6 +239,39 @@ button:hover {
 }
 
 .hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.modal-content {
+  background: white;
+  width: min(90vw, 420px);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.modal-actions button {
+  flex: 1;
+}
+
+.modal.hidden {
   display: none;
 }
 
